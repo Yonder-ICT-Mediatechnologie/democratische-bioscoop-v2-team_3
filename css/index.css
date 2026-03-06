@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 1000px;
+    font-family: 'open sans', italic;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 10px;
+    width: 350px;
+    height: 1000px;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    color: #FEE019;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+#logo {
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#nav-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 10px;
+}
+
+a {
+    color: #FEE019;
+    text-decoration: none;
+    font-size: 20px;
+}
