@@ -121,3 +121,14 @@ hr {
     top: 15px;
     left: 15px;
 }
+
+.time-btn {
+    padding: 10px 15px;
+    border: 2px solid black;
+    background: white;
+    text-decoration: none;
+    color: black;
+    margin-right: 10px;
+    display: inline-block;
+    font-weight: bold;
+}
