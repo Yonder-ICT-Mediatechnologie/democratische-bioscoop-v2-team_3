@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Moviestar Planet</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/navbalk.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <img id="logo" src="../img/logo.png" alt="logo">
+        <h1>Moviestar <br> planet</h1>
+        <div id="nav-links">
+            <a href="../index.html"><img class="nav-icon" src="../img/home_geel.png" alt="home"> Home</a>
+            <a href="../pages/voting.html"><img class="nav-icon" src="../img/vote_geel.png" alt="Voting Film"> Voting Film</a>
+            <a href="../pages/film_pagina.html"><img class="nav-icon" src="../img/film_geel.png" alt="Film Pagina"> Film Pagina</a>
+            <a href="../pages/reserveren.html"><img class="nav-icon" src="../img/calander_geel.png" alt="Reserveren"> Reserveren</a>
+            <div class="nav-footer">
+                <img id="socials" src="../img/socials.png" alt="Socials">
+                <p class="nav-footer-text">Pieter Vreedeplein 174 5038 BW Tilburg</p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-main">
+        <h2>Dashboard</h2>
+
+        <div class="stats-cards">
+            <div class="card">
+                <h3>Totaal Films</h3>
+                <p id="total-movies">0</p>
+            </div>
+            <div class="card">
+                <h3>Totaal Stemmen</h3>
+                <p id="total-votes">0</p>
+            </div>
+            <div class="card">
+                <h3>Geregistreerde Gebruikers</h3>
+                <p id="total-users">0</p>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <h3>Laatste Films</h3>
+            <div class="movie-cards" id="latest-movies"></div>
+        </div>
+
+        <div class="dashboard-section">
+            <h3>Top Stem Films</h3>
+            <div class="movie-cards" id="top-votes"></div>
+        </div>
+    </div>
+
+<script>
+const restService = 'https://project-bioscoop-restservice.azurewebsites.net';
+const apiKey = 'w05KkI9AWhKxzvPFtXotUva';
+
+async function fetchMovies() {
+    const res = await fetch(`${restService}/films?apikey=${apiKey}`);
+    const data = await res.json();
+    return data;
+}
+
+async function updateDashboard() {
+    const movies = await fetchMovies();
+
+    document.getElementById("total-movies").textContent = movies.length;
+    document.getElementById("total-votes").textContent = movies.reduce((sum, m) => sum + (m.votes || 0), 0);
+    document.getElementById("total-users").textContent = 350;
+
+    const latestContainer = document.getElementById("latest-movies");
+    latestContainer.innerHTML = "";
+    movies.slice(-4).reverse().forEach(m => {
+        const card = document.createElement("div");
+        card.className = "movie-card";
+        card.innerHTML = `<img src="../img/${m.title.toLowerCase()}.png" alt="${m.title}"><p>${m.title}</p>`;
+        latestContainer.appendChild(card);
+    });
+
+    const topContainer = document.getElementById("top-votes");
+    topContainer.innerHTML = "";
+    movies.sort((a,b) => (b.votes || 0) - (a.votes || 0)).slice(0,4).forEach(m => {
+        const card = document.createElement("div");
+        card.className = "movie-card";
+        card.innerHTML = `<img src="../img/${m.title.toLowerCase()}.png" alt="${m.title}"><p>${m.title} - ${m.votes || 0} stemmen</p>`;
+        topContainer.appendChild(card);
+    });
+}
+
+updateDashboard();
+</script>
+</body>
+</html>
