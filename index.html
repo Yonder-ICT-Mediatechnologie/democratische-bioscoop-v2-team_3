@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/navbalk.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
@@ -14,16 +15,86 @@
         <h1>Moviestar <br> planet</h1>
         <div id="nav-links">
             <a href="index.html"><img class="nav-icon" src="img/home_geel.png" alt="home"> Home</a>
-            <a href="voting movie.html"><img class="nav-icon" src="img/vote_geel.png" alt="voting movie"> voting movie</a>
-            <a href="film_pagina.html"><img class="nav-icon" src="img/film_geel.png" alt="film pagina"> film pagina</a>
-            <a href="reserveren.html"><img class="nav-icon" src="img/calander_geel.png" alt="reserveren"> reserveren</a>
-            <a href="contacten.html"><img class="nav-icon" src="img/contact_geel.png" alt="contacten"> contacten</a>
+            <a href="pages/voting.html"><img class="nav-icon" src="img/vote_geel.png" alt="voting movie"> voting movie</a>
+            <a href="pages/film_pagina.html"><img class="nav-icon" src="img/film_geel.png" alt="film pagina"> film pagina</a>
+            <a href="pages/reserveren.html"><img class="nav-icon" src="img/calander_geel.png" alt="reserveren"> reserveren</a>
+            <a href="pages/contacten.html"><img class="nav-icon" src="img/contact_geel.png" alt="contacten"> contacten</a>
             <div class="nav-footer">
                 <img id="socials" src="img/socials.png" alt="socials">
                 <p class="nav-footer-text">Pieter Vreedeplein 174 5038 BW Tilburg</p>
             </div>
         </div>
     </nav>
+
+<div class="main-content">
+        <div class="top-movies">
+            <div class="movie-thumb">
+                <img src="spiderman.jpg" alt="">
+                <span>2 aug</span>
+            </div>
+            <div class="movie-thumb">
+                <img src="pirates.jpg" alt="">
+                <span>3 aug</span>
+            </div>
+            <div class="movie-thumb">
+                <img src="harrypotter.jpg" alt="">
+                <span>4 aug</span>
+            </div>
+            <div class="movie-thumb">
+                <img src="titanic.jpg" alt="">
+                <span>5 aug</span>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active">VANDAAG<br><span>2 aug</span></div>
+            <div class="tab">MAANDAG<br><span>3 aug</span></div>
+            <div class="tab">DINSDAG<br><span>4 aug</span></div>
+        </div>
+
+        <div class="movies">
+
+            <div class="movie-card">
+                <img src="spiderman.jpg" alt="">
+                <h3>SPIDERMAN HOME COMMING</h3>
+                <div class="times">
+                    <button>10:30</button>
+                    <button>12:15</button>
+                    <button>21:00</button>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="spiderman.jpg" alt="">
+                <h3>SPIDERMAN HOME COMMING</h3>
+                <div class="times">
+                    <button>10:30</button>
+                    <button>12:15</button>
+                    <button>21:00</button>
+                </div>
+            </div>
+
+            <div class="movie-card light">
+                <img src="zootropolis.jpg" alt="">
+                <h3>ZOOTROPOLIS</h3>
+                <div class="times">
+                    <button>16:00</button>
+                    <button>18:00</button>
+                </div>
+            </div>
+
+            <div class="movie-card light">
+                <img src="zootropolis.jpg" alt="">
+                <h3>ZOOTROPOLIS</h3>
+                <div class="times">
+                    <button>16:00</button>
+                    <button>18:00</button>
+                </div>
+            </div>
+
+        </div>
+</div>
+
 
 <script src="js/rest.js"></script>
 <script>

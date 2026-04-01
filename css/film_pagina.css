@@ -1,0 +1,105 @@
+.main-content {
+    margin-left: 350px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content > * {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.top-movies {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.movie-thumb {
+  position: relative;
+}
+
+.movie-thumb img {
+  width: 180px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.movie-thumb span {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.tabs {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin: 30px;
+}
+.tab {
+  background: white;
+  padding: 15px 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab.active {
+  background: black;
+  color: white;
+}
+
+.tab span {
+  font-size: 12px;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.movie-card {
+  background: #b30000;
+  color: white;
+  padding: 10px;
+  position: relative;
+}
+
+.movie-card.light {
+  background: #f5f5f5;
+  color: black;
+}
+
+.movie-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.movie-card h3 {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 16px;
+}
+
+.times {
+  margin-top: 10px;
+}
+
+.times button {
+  margin-right: 10px;
+  padding: 8px 15px;
+  border: 2px solid black;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
