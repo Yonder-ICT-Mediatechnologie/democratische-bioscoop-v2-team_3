@@ -1,0 +1,55 @@
+#h1 {
+    color: #FEE019;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.main-content {
+    margin-left: 350px;
+    padding: 40px;
+    background: #eaeaea;
+    min-height: 100vh;
+}
+
+.vote-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.vote-card {
+    background: #f5f5f5;
+    border: 1px solid #999;
+    border-radius: 6px;
+    padding: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vote-card h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.vote-card input {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.vote-card img {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.vote-card:hover {
+    transform: scale(1.02);
+    transition: 0.2s;
+    cursor: pointer;
+}
