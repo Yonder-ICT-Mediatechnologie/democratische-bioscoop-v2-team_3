@@ -1,0 +1,123 @@
+.main-content {
+    margin-left: 350px;
+    padding: 40px;
+    background: #eaeaea;
+}
+
+.detail-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.image-box {
+    position: relative;
+    background: #b30000;
+    padding: 10px;
+}
+
+.image-box img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.image-box h3 {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: white;
+}
+
+.detail-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.detail-buttons button {
+    padding: 12px 20px;
+    border: 2px solid black;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.detail-right h2 {
+    margin-top: 0;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.tab {
+    border: 2px solid black;
+    padding: 10px 20px;
+    background: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tab.active {
+    background: black;
+    color: white;
+}
+
+.tab span {
+    font-size: 12px;
+}
+
+.times {
+    margin: 15px 0;
+}
+
+.times button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: 2px solid black;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.detail-right p {
+    line-height: 1.5;
+}
+
+hr {
+    margin: 40px 0;
+}
+
+.movies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.movie-card {
+    background: #b30000;
+    color: white;
+    padding: 10px;
+    position: relative;
+}
+
+.movie-card.light {
+    background: #f5f5f5;
+    color: black;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.movie-card h3 {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
