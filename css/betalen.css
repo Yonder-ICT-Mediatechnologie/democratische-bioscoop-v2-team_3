@@ -1,0 +1,116 @@
+.betalen-body {
+    margin: 0;
+    background: #1e1e1e;
+    color: white;
+    font-family: Arial;
+}
+
+.betalen-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    color: #FEE019;
+}
+
+.header h2 {
+    text-transform: lowercase;
+}
+
+.info-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2a2a2a;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: 1px solid #444;
+}
+
+.info-bar select {
+    background: #1e1e1e;
+    color: white;
+    border: 1px solid #555;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.screen {
+    background: #ccc;
+    color: black;
+    padding: 5px;
+    margin: 20px auto;
+    width: 60%;
+}
+
+.seats {
+    display: grid;
+    grid-template-columns: repeat(8, 40px);
+    gap: 10px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #FEE019;
+    cursor: pointer;
+}
+
+.seat.taken {
+    background: #666;
+    border: none;
+    cursor: not-allowed;
+}
+
+.seat.selected {
+    background: #FEE019;
+    box-shadow: 0 0 10px #FEE019;
+}
+
+.seat:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+#prijs {
+    font-weight: bold;
+    color: #FEE019;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.footer a:hover {
+    background: #FEE019;
+    color: black;
+    border-color: #FEE019;
+}
+
+.footer a:last-child {
+    background: #FEE019;
+    color: black;
+    font-weight: bold;
+}
+
+.footer a:last-child:hover {
+    background: #ffd900;
+}
